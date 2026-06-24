@@ -18,12 +18,7 @@ public class ProductController {
 
         this.productService = productService;
     }
-    @GetMapping("/search")
-public List<Product> search(
-        @RequestParam String keyword){
 
-    return productrepository.findByNameContainingIgnoreCase(keyword);
-}
     @GetMapping
     public List<Product> getAll() {
         return productService.getAllProducts();
